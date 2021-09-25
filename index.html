@@ -6,41 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Summer 2021 Anime Survey</title>
 </head>
 
 <body>
     <div class="container">
         <header>
-            <h1 id="title">Summer 2021 Anime Survey</h1>
-            <p id="description">Which anime were your favorites?</p>
+            <h1 id="title" class="text-center">Summer 2021 Anime Survey</h1>
+            <p id="description" class="text-center">Which anime were your favorites?</p>
         </header>
         <form action="#" id="survey-form">
-            
+
             <div class="form-group">
                 <label for="name" id="name-label">
                     Name
-                    <input id="name" type="text" name="name" placeholder="Enter your name" required />
+                    <input class = "form-control" id="name" type="text" name="name" placeholder="Enter your name" required />
                 </label>
             </div>
 
             <div class="form-group">
                 <label for="email" id="email-label">
                     Email
-                    <input id="email" type="email" name="email" placeholder="Enter your email" required />
+                    <input class = "form-control" id="email" type="email" name="email" placeholder="Enter your email" required />
                 </label>
             </div>
 
             <div class="form-group">
                 <label for="number" id="number-label">
                     Age <span>(optional)</span>
-                    <input id="number" type="number" name="age" min="5" max="120" placeholder="Age" required />
+                    <input class = "form-control" id="number" type="number" name="age" min="5" max="120" placeholder="Age" required />
                 </label>
             </div>
 
             <div class="form-group">
                 <p>Which genre is your favorite?</p>
-                <select class = "form-control" name="role" id="dropdown">
+                <select class="form-control" name="genre" id="dropdown" onchange="checkGenre(this.value)">
                     <option disabled selected value>Select a genre</option>
                     <option value="action">Action</option>
                     <option value="comedy">Comedy</option>
@@ -54,8 +55,82 @@
                     <option value="romance">Romance</option>
                     <option value="other">Other</option>
                 </select>
+                <input type="text" name="genre" id="genre" style="display: none;" />
             </div>
-        
+
+            <div class="form-group">
+                <p>How often do you watch anime?</p>
+                <label>
+                    <input type="radio" name="watch-anime" value="one-three" class=input-radio checked />
+                    1-3 days/week
+                </label>
+                <label>
+                    <input type="radio" name="watch-anime" value="two-four" class=input-radio checked />
+                    2-4 days/week
+                </label>
+                <label>
+                    <input type="radio" name="watch-anime" value="five-seven" class=input-radio checked />
+                    5-7 days/weeks
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p>GameRant's Top 10 Summer 2021 Anime</p>
+                <p>Which of these anime have you watched?
+                    <span class="clue">(Check all that apply)</span>
+                </p>
+                <label>
+                    <input name="watched" value="to-your-eternity" type="checkbox" class="input-checkbox">
+                    To Your Eternity
+                </label>
+                <label>
+                    <input name="watched" value="miss-kobayashi" type="checkbox" class="input-checkbox">
+                    Miss Kobayashi's Dragon Maid S
+                </label>
+                <label>
+                    <input name="watched" value="slime" type="checkbox" class="input-checkbox">
+                    That Time I Got Reincarnated as a Slime Season 2
+                </label>
+                <label>
+                    <input name="watched" value="slime" type="checkbox" class="input-checkbox">
+                    Shaman King (2021)
+                </label>
+                <label>
+                    <input name="watched" value="hero-academia" type="checkbox" class="input-checkbox">
+                    My Hero Academia Season 5
+                </label>
+                <label>
+                    <input name="watched" value="villainess" type="checkbox" class="input-checkbox">
+                    My Next Life as a Villainess: All Routes Lead to Doom! X
+                </label>
+                <label>
+                    <input name="watched" value="great-jahy" type="checkbox" class="input-checkbox">
+                    The Great Jahy Will Not Be Defeated!
+                </label>
+                <label>
+                    <input name="watched" value="higurashi" type="checkbox" class="input-checkbox">
+                    Higurashi: When They Cry – SOTSU
+                </label>
+                <label>
+                    <input name="watched" value="tokyo-revengers" type="checkbox" class="input-checkbox">
+                    Tokyo Revengers
+                </label>
+                <label>
+                    <input name="watched" value="remake-our-life" type="checkbox" class="input-checkbox">
+                    Remake Our Life!
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea class="input-textarea" name="comment" id="comments" placeholder="Enter your comment here..." cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button class="submit-button" id="submit" type="submit">
+                    Submit
+                </button>
+            </div>
 
         </form>
 
