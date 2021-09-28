@@ -4,12 +4,22 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(212, 233, 233);
+    color:rgb(212, 233, 233);
+}
+
 html {
     font-size: 10px;
 }
 
 h1 {
     line-height: 1.5;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
 }
 
 p {
@@ -24,6 +34,8 @@ p {
     width: 100%;
     margin: 3.125rem auto 0 auto;
     border: 1px solid blue;
+    background-color: rgba(57, 57, 216, 0.794);
+    padding: 20px;
 }
 
 label {
@@ -66,4 +78,15 @@ label {
     margin-right: 0.625rem;
     min-height: 1.25rem;
     min-width: 1.25rem;
+}
+
+.input-textarea {
+    width: 100%;
+}
+
+.submit-button {
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 15px;
 }
