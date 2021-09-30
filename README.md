@@ -10,7 +10,7 @@
   <h3 align="center">Summer 2021 Anime Survey</h3>
 
   <p align="center">
-    A survey form based on GameRant's top 10 summer 2021 anime. 
+    A survey form for users to select GameRant's top 10 Summer 2021 anime show(s) they have watched.
   </p>
 </p>
 
